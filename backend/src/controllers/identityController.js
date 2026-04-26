@@ -1,3 +1,5 @@
+const identityService = require('../services/identityService');
+
 const validateDni = async (req, res) => {
     try{
         const {dni} = req.body;
@@ -10,11 +12,13 @@ const validateDni = async (req, res) => {
             })
         }
 
+        const reniecData = await identityService.validateWithReniec(dni);
+
         //Respuesta temporal
         res.status(200).json({
             success: true,
             message: "DNI recibido correctamente para validaciones.",
-            data: { dni }
+            data: reniecData
         });
     } catch(error){
         res.status(500).json({
