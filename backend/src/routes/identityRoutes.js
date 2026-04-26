@@ -1,13 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const identityController = require('../controllers/identityController');
 
-router.post('/validate' , (req,res) => {
-    const { dni } = req.body;
-
-    res.json({
-        mensaje: "Ruta de validación activa",
-        recibido: "dni"
-    });
-});
+router.post('/validate', identityController.validateDni);
 
 module.exports = router;
