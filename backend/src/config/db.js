@@ -8,7 +8,6 @@ const pool = mysql.createPool({
     port: 3306
 });
 
-// Prueba de fuego: ¿Qué está leyendo realmente?
 console.log(`Intento de conexión con usuario: ${process.env.DB_USER}`);
 
 module.exports = pool;

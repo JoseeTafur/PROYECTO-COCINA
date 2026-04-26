@@ -4,6 +4,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const identifyRoutes = require('./routes/identityRoutes');
+const connectMongo = require('./config/mongo');
+
+connectMongo();
 
 const app = express();
 app.use(express.json());
