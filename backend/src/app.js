@@ -1,8 +1,9 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const identifyRoutes = require('./routes/identityRoutes');
 
 dotenv.config();
+
+const identifyRoutes = require('./routes/identityRoutes');
 
 const app = express();
 app.use(express.json());

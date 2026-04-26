@@ -1,4 +1,5 @@
 const axios = require('axios');
+const userModel = require('../models/userModel');
 
 const validateWithReniec = async (dni) => {
     try {
@@ -10,10 +11,16 @@ const validateWithReniec = async (dni) => {
             }
         });
 
+        const data = response.data.datos;
+
+        if (data) {
+            const resultado = await userModel.saveUser(data); 
+            console.log(`✅ Registro guardado en MySQL. ID generado: ${resultado.insertId}`);
+        }
+
         return response.data;
-    } catch(error){
-        console.log("Error en service: error.message");
-        throw new Error("No se pudo conectar con el servicio de identidad externo");
+    } catch (error) {
+        throw new Error("Error en el proceso de identidad: " + error.message);
     }
 };
 
