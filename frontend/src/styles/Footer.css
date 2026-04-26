@@ -1,0 +1,84 @@
+.main-footer {
+  background-color: #1a1a1a; /* Negro carbón */
+  color: #e8e2d9; /* Crema suave para el texto */
+  padding: 80px 0 0 0;
+  margin-top: 60px;
+  border-top: 3px solid var(--chef-gold);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.footer-logo span {
+  color: var(--chef-gold);
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.7;
+  max-width: 250px;
+}
+
+.footer-column h4 {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  color: #e8e2d9;
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.footer-column a:hover {
+  opacity: 1;
+  color: var(--chef-gold);
+}
+
+.footer-column p {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 25px 0;
+  text-align: center;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.payment-methods {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 15px;
+}

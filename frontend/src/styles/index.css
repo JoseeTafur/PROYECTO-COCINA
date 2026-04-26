@@ -1,0 +1,19 @@
+/* 1. RESET GLOBAL: Elimina márgenes y paddings de fábrica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Asegura que el contenedor raíz ocupe todo el ancho sin restricciones */
+html, body, #root {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden; /* Evita que el contenido se salga de lado */
+}
+
+body {
+  background-color: #fdfaf5; /* El color crema que definimos */
+  -webkit-font-smoothing: antialiased;
+}

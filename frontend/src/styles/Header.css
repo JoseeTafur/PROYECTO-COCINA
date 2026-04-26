@@ -1,0 +1,158 @@
+:root {
+  --chef-dark: #1e1e1e;   /* Negro carbón */
+  --chef-gold: #b59461;   /* Dorado envejecido */
+  --chef-cream: #fdfaf5;  /* Crema de fondo */
+  --chef-border: #e8e2d9; /* Gris cálido para bordes */
+}
+
+.chef-header {
+  width: 100%;
+  background-color: var(--chef-cream);
+  border-bottom: 1px solid var(--chef-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+  /* MARCO SUPERIOR E INFERIOR: Esto le da el "aire" al header */
+  padding: 15px 0; 
+  transition: all 0.3s ease; /* Para que se sienta suave al hacer scroll */
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px; /* Reducimos un poco el alto fijo para que el padding mande */
+}
+
+.container-centered {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px; /* Aumentamos el margen lateral interno */
+}
+
+/* Navegación Izquierda */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--chef-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  
+  /* Marco interno para cada link */
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--chef-gold);
+  background-color: rgba(181, 148, 97, 0.05); /* Un fondo dorado casi invisible */
+}
+
+/* Logo Central */
+.logo-area {
+  text-align: center;
+}
+
+.brand-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-accent {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--chef-gold);
+  margin-bottom: -8px;
+}
+
+.brand-name {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--chef-dark);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* Acciones Derecha */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  border: none;
+  border-bottom: 1px solid var(--chef-border);
+  background: transparent;
+  padding: 5px 30px 5px 0;
+  font-size: 0.9rem;
+  outline: none;
+  width: 180px;
+  transition: width 0.4s ease;
+}
+
+.search-box input:focus {
+  width: 240px;
+  border-bottom-color: var(--chef-gold);
+}
+
+.search-icon {
+  position: absolute;
+  right: 0;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+/* Bolsa de Compra */
+.cart-btn {
+  text-decoration: none;
+  color: var(--chef-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cart-icon-container {
+  position: relative;
+  font-size: 1.4rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: var(--chef-dark);
+  color: white;
+  font-size: 0.65rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}

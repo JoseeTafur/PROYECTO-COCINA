@@ -1,0 +1,297 @@
+/* VARIABLES CULINARIAS */
+:root {
+  --chef-dark: #1e1e1e;
+  --chef-gold: #b59461;
+  --chef-olive: #4a5d23;
+  --chef-cream: #fdfaf5;
+  --chef-border: #e8e2d9;
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.home-wrapper {
+  width: 100%;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 1. HERO CAROUSEL (Simulado) */
+.hero-slider {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--chef-dark);
+}
+
+.slider-item {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.1)), 
+                    url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  transition: transform 10s ease-out; /* Efecto Ken Burns */
+}
+
+.hero-slider:hover .slider-item {
+  transform: scale(1.05);
+}
+
+.slider-content {
+  color: white;
+  z-index: 2;
+}
+
+.slider-tag {
+  color: var(--chef-gold);
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.slider-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.btn-gold {
+  background-color: var(--chef-gold);
+  color: white;
+  border: none;
+  padding: 18px 45px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.btn-gold:hover {
+  background-color: #967a4f;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* 2. QUICK NAV (Categorías) */
+.quick-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+  gap: 20px;
+}
+
+.q-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+
+.q-circle {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  border: 1px solid var(--chef-border);
+  transition: var(--transition);
+}
+
+.q-item:hover .q-circle {
+  background-color: var(--chef-cream);
+  border-color: var(--chef-gold);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(181, 148, 97, 0.15);
+}
+
+.q-item span {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--chef-dark);
+}
+
+/* 3. PROMO GRID (Asimétrico) */
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 250px 250px;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.grid-main {
+  grid-row: span 2;
+  border-radius: 8px;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1584990344619-3ee4924da724?auto=format&fit=crop&w=800');
+  background-size: cover;
+  position: relative;
+}
+
+.grid-side-top { 
+  background-image: url('https://images.unsplash.com/photo-1594494006614-209bb8abc8d0?auto=format&fit=crop&w=500'); 
+  background-size: cover; border-radius: 8px; overflow: hidden; position: relative;
+}
+
+.grid-side-bottom { 
+  background-image: url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=500'); 
+  background-size: cover; border-radius: 8px; overflow: hidden; position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  color: white;
+  transition: var(--transition);
+}
+
+.overlay:hover {
+  background: linear-gradient(to top, rgba(181, 148, 97, 0.6), transparent);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  width: fit-content;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+/* 4. PRODUCT CARD */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--chef-dark);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid var(--chef-border);
+  border-radius: 4px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border-color: var(--chef-gold);
+}
+
+.product-image {
+  height: 280px;
+  padding: 30px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.badge-new {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--chef-dark);
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.product-info {
+  padding: 25px;
+  border-top: 1px solid var(--chef-border);
+}
+
+.brand {
+  color: var(--chef-gold);
+  font-weight: 900;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+}
+
+.product-info h4 {
+  margin: 8px 0 12px;
+  font-size: 1.1rem;
+  color: var(--chef-dark);
+}
+
+.current-price {
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: var(--chef-dark);
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.btn-add {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background-color: var(--chef-dark);
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-add:hover {
+  background-color: var(--chef-gold);
+}

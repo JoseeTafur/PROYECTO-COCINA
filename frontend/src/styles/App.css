@@ -1,0 +1,76 @@
+:root {
+  --fc-green: #3a833d; /* Verde institucional */
+  --fc-dark: #222222;
+  --fc-gray: #767676;
+  --fc-bg: #f4f4f4;
+}
+
+body {
+  background-color: var(--fc-bg);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header Styles */
+.header-container {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-bar {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: var(--fc-green);
+  color: white;
+  border: none;
+  padding: 0 20px;
+}
+
+/* Nav Categorías */
+.nav-categories {
+  background-color: var(--fc-dark);
+}
+
+.nav-categories .nav-link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 12px 20px;
+  text-transform: uppercase;
+}
+
+.nav-categories .nav-link:hover {
+  background-color: #333;
+}
+
+/* Home Styles */
+.hero-banner {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  border-radius: 8px;
+}
+
+.category-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}

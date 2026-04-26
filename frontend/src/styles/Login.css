@@ -1,0 +1,96 @@
+.login-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--chef-cream);
+}
+
+.login-card {
+  background: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  border: 1px solid var(--chef-border);
+}
+
+.login-subtitle {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--chef-dark);
+  letter-spacing: 1px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--chef-border);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: var(--chef-gold);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--chef-dark);
+  color: white;
+  border: none;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background-color: var(--chef-gold);
+}
+
+/* Añade esto a tu Login.css existente */
+
+.login-card {
+  /* ... tus estilos anteriores ... */
+  max-height: 90vh;
+  overflow-y: auto; /* Por si el formulario es largo en pantallas pequeñas */
+}
+
+.login-form .input-group:last-of-type {
+  margin-bottom: 30px;
+}
+
+/* Efecto suave para los links de navegación entre Login y Register */
+.login-footer a {
+  color: var(--chef-gold);
+  text-decoration: none;
+  font-weight: 700;
+  transition: border-bottom 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.login-footer a:hover {
+  border-bottom: 1px solid var(--chef-gold);
+}
